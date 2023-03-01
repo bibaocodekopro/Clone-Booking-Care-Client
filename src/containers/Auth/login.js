@@ -4,6 +4,8 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import "./login.scss";
 import { FormattedMessage } from "react-intl";
+import { handleLoginApi } from '../../services/userService';
+import { Form } from "reactstrap";
 
 class Login extends Component {
     constructor(props) {
@@ -23,12 +25,20 @@ class Login extends Component {
             password: event.target.value
         })
     }
-    handleLogin= () => {
-       console.log('user name : ' , this.state.username, 'password : '  , this.state.password);
-       console.log('all state: ' , this.state)
+    handleLogin = async () => {
+        console.log('user name : ', this.state.username, 'password : ', this.state.password);
+        console.log('all state: ', this.state);
+        try {
+            await handleLoginApi(this.state.username, this.state.password);
+        } catch (e) {
+            console.log(e);
+        }
+        
     }
+
     render() {
         return (
+
             <div className="login-background">
                 <div className="login-container">
                     <div className="login-content row">
@@ -54,7 +64,7 @@ class Login extends Component {
                             />
                         </div>
                         <div className="col-12">
-                            <button className="btn-login" onClick={()=>this.handleLogin()}>Login</button>
+                            <button className="btn-login" onClick={() => this.handleLogin()}>Login</button>
                         </div>
                         <div className="col-12 forgot-password">
                             <span>Forgot your password?</span>
@@ -69,6 +79,7 @@ class Login extends Component {
                     </div>
                 </div>
             </div>
+
         );
     }
 }
