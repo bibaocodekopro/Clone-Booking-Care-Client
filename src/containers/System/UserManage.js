@@ -2,20 +2,23 @@ import { include } from 'lodash';
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import {getAllUsers,handleCreateNewUser} from '../../services/userService';
+import {getAllUsers,handleCreateNewUser,deleteUserServices} from '../../services/userService';
 import  ModalUser  from './modalUser';
 import './userManage.scss';
+import {emitter} from  "../../utils/emitter"
 class UserManage extends Component {
 
     constructor(props){
             super(props);
             this.state = {
                 arrUsers:[],
+           
                 isOpenModalUser: false
             }
     }
     async componentDidMount() {
       await this.getAllUserFromReact();
+    //   await this.getOneUserFromReact();
     }
     getAllUserFromReact=async () =>{
           let response= await getAllUsers('ALL');
@@ -25,6 +28,7 @@ class UserManage extends Component {
             }) 
         }   
     }
+    
 handleAddNewUser = ()=>{
     this.setState({
         isOpenModalUser:true
@@ -46,16 +50,37 @@ createNewUser = async(data)  =>{
             this.setState({
                  isOpenModalUser:false
             })
-           
+           emitter.emit('EVENT_CLEAR_MODAL_DATA');
         }
-        console.log("response create user: ",response)
     } catch (e) {
-        console.log("e")
+        console.log(e)
     }
 
     console.log("check data from child", data)
 }
-
+    // getOneUserFromReact = async(id)=>{
+    //     let response = await editUserServices(id);
+    //     if (response && response.errCode===0){
+    //         this.setState({
+    //             editUser :response.oneUser
+    //         })
+    //     }
+    // }
+    handleDeleteUser= async(id)=>{
+        console.log("delete User: ",id)
+         try {
+            let response = await deleteUserServices(id);
+            if(response&& response.errCode===0){
+                    await this.getAllUserFromReact();
+                    alert("delete successfully")
+            }else{
+                alert(response.errMessage)
+            }
+         } catch (e) {
+            console.log(e)
+         }
+    }
+  
     render() {
         console.log("check all user",this.state)
         let arrUsers= this.state.arrUsers;
@@ -76,7 +101,7 @@ createNewUser = async(data)  =>{
                             <i className="fas fa-plus px-1 "></i>Add a new user</button>
                     </div>
                     <table id="customers">
-                        <tbody>
+                        <thead key={"thead"}>
                         <tr>
                             <th>Email</th>
                             <th>First Name</th>
@@ -84,18 +109,22 @@ createNewUser = async(data)  =>{
                             <th>Address</th>
                             <th>Action</th>
                         </tr>
+                        </thead>
+                          <tbody key={"tbody"}>
                         {arrUsers && arrUsers.map((item,index)=>{
                             return (
+                           
                                 <tr>
-                                    <td>{item.email}</td>
-                                    <td>{item.firstName}</td>
-                                    <td>{item.lastName}</td>
-                                    <td>{item.address}</td>
+                                    <td key="email">{item.email}</td>
+                                    <td  key="firstName">{item.firstName}</td>
+                                    <td  key="lastName">{item.lastName}</td>
+                                    <td  key="address">{item.address}</td>
                                     <td>
-                                            <button className='btn-edit' ><i className="fas fa-user-edit"></i></button>
-                                            <button className='btn-delete'><i className="fas fa-trash-alt"></i></button>
+                                            <button className='btn-edit' onClick={() => this.handleEditUser(item)}  key="edit"><i className="fas fa-user-edit"></i></button>
+                                            <button className='btn-delete' onClick={() => this.handleDeleteUser(item.id)}  key="delete"><i className="fas fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
+                               
                             )
                         })}
                     </tbody>
