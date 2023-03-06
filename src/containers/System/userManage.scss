@@ -45,4 +45,17 @@
       background-color: transparent !important;
       color: #df0700 !important;
     }
+    .modal-user-container{
+          .input-container{
+              display :flex;
+              flex-direction: column;
+            .input {
+                  border-radius: 3px;
+                  border: 1px solid grey;
+                  height: 30px;
+                  outline: none;
+                  padding: 0 10px;
+            }
+          }
+    }
 }
