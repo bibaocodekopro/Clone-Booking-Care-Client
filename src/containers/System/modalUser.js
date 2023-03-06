@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {emitter} from "../../utils/emitter"
 class ProductManage extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,22 @@ class ProductManage extends Component {
       phoneNumber: "",
       gender: "",
       roleId: "",
-    };
+    }
+    this.ListenToEmitter();
+  }
+  ListenToEmitter(){
+    emitter.on('EVENT_CLEAR_MODAL_DATA',()=>{
+      this.setState({
+      email: "",
+      password: "",
+      firstName: "",
+      lastName: "",
+      address: "",
+      phoneNumber: "",
+      gender: "",
+      roleId: "",
+      })
+    })
   }
   handleOnChangeInput = (event, id) => {
     // this.state[id]= event.target.value;

@@ -9,8 +9,20 @@ const getAllUsers  = (inputId)   => {
 const handleCreateNewUser=(data) =>{
     return axios.post('/api/create-new-user',data);
 }
+// const editUserServices= (userId)=>{
+//     return axios.get(`/api/edit-user`,{id:userId});
+// }
+
+const deleteUserServices = (userId) =>{
+    //return axios.delete('/api/delete-user',id);
+    return axios.delete('/api/delete-user',{
+           data: {id:userId}
+    });
+}
 export {
     handleLoginApi,
     getAllUsers,
-    handleCreateNewUser
+    handleCreateNewUser,
+    // editUserServices,
+    deleteUserServices
 }
