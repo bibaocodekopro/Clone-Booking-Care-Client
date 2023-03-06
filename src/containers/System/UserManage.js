@@ -1,9 +1,10 @@
+import { include } from 'lodash';
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import './userManage.scss';
-import {getAllUsers} from '../../services/userService';
+import {getAllUsers,handleCreateNewUser} from '../../services/userService';
 import  ModalUser  from './modalUser';
+import './userManage.scss';
 class UserManage extends Component {
 
     constructor(props){
@@ -14,7 +15,10 @@ class UserManage extends Component {
             }
     }
     async componentDidMount() {
-        let response= await getAllUsers('ALL');
+      await this.getAllUserFromReact();
+    }
+    getAllUserFromReact=async () =>{
+          let response= await getAllUsers('ALL');
         if(response && response.errCode===0){
             this.setState({
                 arrUsers: response.users
@@ -31,26 +35,48 @@ toggleModalUser = ()=>{
         isOpenModalUser:!this.state.isOpenModalUser,
        })
 }
+createNewUser = async(data)  =>{
+    try {
+        let response= await handleCreateNewUser(data);
+        if(response &&response.errCode !==0){
+            alert(response.message);
+        }else{
+            await this.getAllUserFromReact();
+            alert("Create new user succeeded");
+            this.setState({
+                 isOpenModalUser:false
+            })
+           
+        }
+        console.log("response create user: ",response)
+    } catch (e) {
+        console.log("e")
+    }
+
+    console.log("check data from child", data)
+}
 
     render() {
-        console.log('check user',this.state);
+        console.log("check all user",this.state)
         let arrUsers= this.state.arrUsers;
         return (
             <div className="user-container ">
                 <ModalUser
                         isOpen={this.state.isOpenModalUser}
-                        closeModal={this.toggleModalUser} 
+                        closeModal={this.toggleModalUser}
+                        createNewUser={this.createNewUser}
                 />
                 <div className="title text-center">
                     Hoc react JS
                 </div>
                 <div className="customers mt-3 mx-3">
                     <div className="mx-1">
-                        <button className="btn btn-primary px-2"
+                        <button className="btn btn-primary px-2 mb-2"
                         onClick={()=>this.handleAddNewUser()}>
-                            <i class="fas fa-plus px-1"></i>Add a new user</button>
+                            <i className="fas fa-plus px-1 "></i>Add a new user</button>
                     </div>
                     <table id="customers">
+                        <tbody>
                         <tr>
                             <th>Email</th>
                             <th>First Name</th>
@@ -66,13 +92,13 @@ toggleModalUser = ()=>{
                                     <td>{item.lastName}</td>
                                     <td>{item.address}</td>
                                     <td>
-                                            <button className='btn-edit' ><i class="fas fa-user-edit"></i></button>
-                                            <button className='btn-delete'><i class="fas fa-trash-alt"></i></button>
+                                            <button className='btn-edit' ><i className="fas fa-user-edit"></i></button>
+                                            <button className='btn-delete'><i className="fas fa-trash-alt"></i></button>
                                     </td>
                                 </tr>
                             )
                         })}
-                 
+                    </tbody>
                     </table>
                 </div>
             </div>
