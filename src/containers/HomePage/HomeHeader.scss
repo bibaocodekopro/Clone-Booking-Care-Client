@@ -1,7 +1,7 @@
 .home-header-container {
        height: 70px;
        width: 100%;
-       padding: 0 15px;
+       padding: 0 80px;
 
        .home-header-content {
               width: 100%;
@@ -9,33 +9,34 @@
               display: flex;
 
               .left-content {
-                     width: 20%;
+                     width: 25%;
                      display: flex;
                      padding: 0 20px;
                      align-items: center;
 
                      .header-logo {
-                            background: url('../../assets/logo.svg') center center no-repeat;
-                            height: 100%;
-                            width: 100%;
+                            background: url("../../assets/logo.svg") center center no-repeat;
+                            height: 55%;
+                            width: 55%;
                             cursor: pointer;
-
                      }
 
                      i {
-                            font-size: 25px;
+                            font-size: 23px;
                             cursor: pointer;
                             padding-right: 10px;
                      }
               }
 
               .center-content {
-                     width: 60%;
+                     width: 50%;
                      display: flex;
                      justify-content: space-between;
                      align-items: center;
 
                      .child-content {
+                            cursor: pointer;
+
                             .subs-title {
                                    font-weight: 400px;
                                    font-size: 13px;
@@ -44,27 +45,100 @@
               }
 
               .right-content {
-                     width: 20%;
+                     width: 25%;
                      display: flex;
-                     justify-content: center;
+                     justify-content: right;
                      align-items: center;
+
+                     .support {
+                            cursor: pointer;
+                            padding-right: 20px;
+
+                            i {
+                                   font-size: 15px;
+                                   color: #757373;
+                            }
+
+                            &:hover {
+                                   color: black;
+                                   font-weight: bold;
+                            }
+                     }
+
+                     .language-vi {
+                            margin: 0 5px;
+                            background: #c9c6b898;
+                            width: 25px;
+                            height: 25px;
+                            padding-top: 4px;
+                            border-radius: 50%;
+                            box-shadow: 0px 1px 4px rgb(0, 0, 0);
+                            text-align: center;
+                            font-size: 13px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            opacity: 0.3;
+
+                            &.active {
+                                   opacity: 1;
+                                   background: #f7d800;
+                            }
+
+                            &:hover {
+                                   opacity: 1;
+                                   background: #f7d800;
+                                   width: 27px;
+                                   height: 27px;
+                                   font-size: 14px;
+                            }
+                     }
+
+                     .language-en {
+                            opacity: 0.3;
+                            margin: 0 5px;
+                            background: #c9c6b898;
+                            width: 25px;
+                            height: 25px;
+                            padding-top: 4px;
+                            border-radius: 50%;
+                            box-shadow: 0px 1px 4px rgb(0, 0, 0);
+                            text-align: center;
+                            font-size: 13px;
+                            font-weight: bold;
+                            cursor: pointer;
+
+                            &.active {
+                                   opacity: 1;
+                                   background: #0fb5e7de;
+                            }
+
+                            &:hover {
+                                   opacity: 1;
+                                   background: #0fb5e7de;
+                                   width: 27px;
+                                   height: 27px;
+                                   font-size: 14px;
+                            }
+                     }
               }
        }
 }
 
 .home-header-banner {
-       background: url('../../assets/header-background.jpg');
+       background-image: url("../../assets/header-background.jpg"),
+              linear-gradient(rgba(85, 57, 57, 0.25), rgba(255, 255, 255, 0.1));
        height: 485px;
        background-repeat: no-repeat;
        background-size: cover;
        background-position: center;
-       margin: 8px 0;
+       margin: 5px 0;
        display: flex;
        flex-direction: column;
 
        .content-up {
-              height: 50%;
-              border: 1px solid red;
+              background-image: linear-gradient(rgba(0, 0, 0, 0.219),
+                            rgba(228, 205, 205, 0.027));
+              height: 65%;
 
               .title1 {
                      color: white;
@@ -96,7 +170,6 @@
 
                      i {
                             margin: 0 5px;
-
                      }
 
                      input {
@@ -110,40 +183,41 @@
        }
 
        .content-down {
-              height: 50%;
-              border: 1px solid red;
+              height: 35%;
+              background-image: linear-gradient(rgba(228, 205, 205, 0.027),
+                            rgb(255, 255, 255));
+              align-items: flex-end;
+              display: flex;
+              justify-content: center;
 
               .options {
-
                      text-align: center;
-                     border: 1px solid red;
-
                      display: flex;
-                     grid-gap: 75px;
+                     grid-gap: 50px;
                      justify-content: center;
 
                      .option-child {
-                            width: 140px;
-                            height: 110px;
-                            border: 1px solid red;
-
+                            width: 120px;
+                            height: 120px;
 
                             .icon-child {
                                    text-shadow: 1px 1px 1px rgb(13, 110, 134);
                                    color: rgb(53, 201, 238);
                                    background: white;
-                                   width: 55px;
-                                   height: 55px;
+                                   width: 50px;
+                                   height: 50px;
                                    padding-bottom: 1px;
                                    border-radius: 50%;
                                    box-shadow: 1px 2px 5px rgb(0, 0, 0);
                                    text-align: center;
                                    margin: 0 auto;
-                                   font-size: 35px;
+                                   font-size: 30px;
+                                   cursor: pointer;
                             }
 
                             .text-child {
-                                   font-size: 17px;
+                                   font-size: 16px;
+                                   padding-top: 10px;
                                    font-weight: bold;
                                    cursor: pointer;
 
@@ -154,6 +228,4 @@
                      }
               }
        }
-
-
 }
