@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import { LANGUAGES } from "../../utils";
 import { changeLanguageApp } from "../../store/actions";
+
 class HomeHeader extends Component {
        changeLanguage = (language) => {
               this.props.changeLanguageAppRedux(language);
@@ -168,6 +169,7 @@ class HomeHeader extends Component {
                                    </div>
                             </div>
                      </React.Fragment>
+
               );
        }
 }
