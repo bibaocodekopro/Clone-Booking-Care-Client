@@ -1,13 +1,14 @@
-.section-healthFacilities {
+.section-outstandingDoctor {
        height: 350px;
        border-bottom: 3px solid #dad9dd;
 
-       .healthFacilities-container {
+       .outstandingDoctor-container {
               margin: 0 100px;
               display: flex;
               flex-direction: column;
 
-              .healthFacilities-header {
+
+              .outstandingDoctor-header {
                      height: 60px;
                      margin-bottom: 30px;
                      padding-top: 30px;
@@ -34,16 +35,24 @@
                      }
               }
 
-              .healthFacilities-body {
-                     .healthFacilities-customize {
+              .outstandingDoctor-body {
+                     text-align: center;
+
+                     .outstandingDoctor-customize {
+                            border: 1px solid red;
+
                             .bg-image {
-                                   background: url('../../../assets/healthFacilities/lo-go-viet-duc.jpg');
-                                   width: 278px;
-                                   height: 150px;
+                                   background: url('../../../assets/doctor/bs-noi-bat1.jpg');
+                                   width: 140px;
+                                   height: 140px;
                                    background-position: center center;
                                    background-repeat: no-repeat;
                                    background-size: cover;
                                    background-color: #eee;
+                                   border-radius: 50%;
+                                   border: 1px solid red;
+                                   margin-left: 65px;
+
                             }
                      }
 

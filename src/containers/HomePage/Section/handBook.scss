@@ -1,13 +1,14 @@
-.section-healthFacilities {
-       height: 350px;
+.section-handBook {
+       height: 300px;
+       background: #f5f2f2;
        border-bottom: 3px solid #dad9dd;
 
-       .healthFacilities-container {
+       .handBook-container {
               margin: 0 100px;
               display: flex;
               flex-direction: column;
 
-              .healthFacilities-header {
+              .handBook-header {
                      height: 60px;
                      margin-bottom: 30px;
                      padding-top: 30px;
@@ -34,10 +35,10 @@
                      }
               }
 
-              .healthFacilities-body {
-                     .healthFacilities-customize {
+              .handBook-body {
+                     .handBook-customize {
                             .bg-image {
-                                   background: url('../../../assets/healthFacilities/lo-go-viet-duc.jpg');
+                                   background: url('../../../assets/handBook/kham-tai-mui-hong-1.png');
                                    width: 278px;
                                    height: 150px;
                                    background-position: center center;
