@@ -143,19 +143,21 @@
               .title1 {
                      color: white;
                      text-align: center;
-                     font-size: 32px;
+                     font-size: 35px;
                      text-shadow: 1px 1px 1px #333;
                      padding-top: 50px;
                      margin-bottom: 8px;
+                     font-family: "Lucida Console", "Courier New", monospace;
               }
 
               .title2 {
                      color: white;
                      text-align: center;
-                     font-size: 32px;
+                     font-size: 37px;
                      text-shadow: 1px 1px 1px black;
                      font-weight: bold;
                      padding-bottom: 15px;
+                     font-family: "Times New Roman", Times, serif;
               }
 
               .search {
@@ -202,14 +204,14 @@
                             height: 120px;
 
                             .icon-child {
-                                   text-shadow: 1px 1px 1px rgb(13, 110, 134);
-                                   color: rgb(53, 201, 238);
-                                   background: white;
+                                   text-shadow: 1px 1px 1px rgb(25, 50, 56);
+                                   color: rgb(132, 200, 218);
+                                   background: rgb(242, 245, 209);
                                    width: 50px;
                                    height: 50px;
                                    padding-bottom: 1px;
                                    border-radius: 50%;
-                                   box-shadow: 1px 2px 5px rgb(0, 0, 0);
+                                   box-shadow: 1px 2px 5px rgb(202, 194, 194);
                                    text-align: center;
                                    margin: 0 auto;
                                    font-size: 30px;
@@ -217,10 +219,11 @@
                             }
 
                             .text-child {
-                                   font-size: 16px;
+                                   font-size: 18px;
                                    padding-top: 10px;
-                                   font-weight: bold;
+                                   font-weight: 500;
                                    cursor: pointer;
+                                   font-family: "Times New Roman", Times, serif;
 
                                    &:hover {
                                           color: rgb(53, 201, 238);

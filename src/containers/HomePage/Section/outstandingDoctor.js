@@ -1,29 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import "./outstandingDoctor.scss";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 class outstandingDoctor extends Component {
-
        render() {
-              let settings = {
-                     dots: false,
-                     infinite: true,
-                     speed: 500,
-                     slidesToShow: 4,
-                     slidesToScroll: 1
-              };
-
               return (
-                     <div className="section-outstandingDoctor">
+                     <div className="section-share section-outstandingDoctor">
                             <div className="outstandingDoctor-container">
                                    <div className="outstandingDoctor-header">
                                           <span className="title-section">Bác sĩ nổi bật tuần qua</span>
                                           <button className="btn-section">Xem Thêm</button>
                                    </div>
                                    <div className="outstandingDoctor-body">
-                                          <Slider {...settings} >
+                                          <Slider {...this.props.settings} >
                                                  <div className="outstandingDoctor-customize">
                                                         <div className="bg-image" />
                                                         <div className='position'>

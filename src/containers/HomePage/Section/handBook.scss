@@ -45,6 +45,31 @@
                                    background-repeat: no-repeat;
                                    background-size: cover;
                                    background-color: #eee;
+                                   float: left;
+                                   position: relative;
+                                   min-height: 1px;
+                                   width: 50%
+                            }
+
+                            .title-bg {
+                                   padding-left: 10px;
+                                   width: 50%;
+                                   float: right;
+                                   max-height: 150px;
+                                   overflow: hidden;
+                                   padding-top: 3px;
+
+                                   h6 {
+                                          font-weight: bold;
+                                          font-size: 16px;
+                                          margin-bottom: 15px;
+                                   }
+                            }
+
+                            &:hover {
+                                   h6 {
+                                          color: #45c3d2;
+                                   }
                             }
                      }
 

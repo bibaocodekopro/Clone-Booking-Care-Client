@@ -1,93 +1,287 @@
-.section-specialty {
-       height: 350px;
-       background: #f5f2f2;
-       border-bottom: 3px solid #dad9dd;
-       border-top: 3px solid #dad9dd;
+  .slick-prev {
 
-       .specialty-container {
-              margin: 0 100px;
-              display: flex;
-              flex-direction: column;
+         //position: relative !important;
+         left: -10px !important;
+         z-index: 1000 !important;
+         height: 48px !important;
+         width: 44px !important;
+         background: #e7d8d8ec;
+         border: 2px solid gray;
 
-              .specialty-header {
-                     height: 60px;
-                     margin-bottom: 30px;
-                     padding-top: 30px;
+         &:hover {
+                background: white !important;
+         }
 
-                     .title-section {
-                            font-size: 22px;
-                            font-weight: 600;
-                            text-transform: uppercase;
-                     }
+  }
 
-                     .btn-section {
-                            float: right;
-                            display: block;
-                            border: none;
-                            padding: 10px 15px;
-                            background: #d1cece;
-                            color: black;
+  .slick-prev:before {
+         font-family: FontAwesome !important;
+         color: gray;
+  }
 
-
-                            &:hover {
-                                   background: #f7d800;
-                                   color: #eee;
-                            }
-                     }
-              }
-
-              .specialty-body {
-                     .specialty-customize {
-                            .bg-image {
-                                   background: url('../../../assets/specialty/co-xuong-khop.jpg');
-                                   width: 278px;
-                                   height: 150px;
-                                   background-position: center center;
-                                   background-repeat: no-repeat;
-                                   background-size: cover;
-                                   background-color: #eee;
-                            }
-                     }
-
-                     .slick-prev {
-
-                            //position: relative !important;
-                            left: -10px !important;
-                            z-index: 1000 !important;
-                            height: 48px !important;
-                            width: 44px !important;
-                            background: #e7d8d8ec;
-                            border: 2px solid gray;
-
-                            &:hover {
-                                   background: white !important;
-                            }
-
-                     }
-
-                     .slick-prev:before {
-                            font-family: FontAwesome !important;
-                            color: gray;
-                     }
-
-                     .slick-next {
-                            right: -10px !important;
-                            z-index: 1000 !important;
-                            height: 48px !important;
-                            width: 44px !important;
-                            background: #e7d8d8ec;
-                            border: 2px solid gray;
+  .slick-next {
+         right: -10px !important;
+         z-index: 1000 !important;
+         height: 48px !important;
+         width: 44px !important;
+         background: #e7d8d8ec;
+         border: 2px solid gray;
 
 
-                            &:hover {
-                                   background: white !important;
-                            }
-                     }
+         &:hover {
+                background: white !important;
+         }
+  }
 
-                     .slick-next:before {
-                            font-family: FontAwesome !important;
-                            color: gray !important;
-                     }
-              }
-       }
-}
+  .slick-next:before {
+         font-family: FontAwesome !important;
+         color: gray !important;
+  }
+
+  .section-share {
+         &.section-specialty {
+                background: #f5f2f2;
+         }
+
+
+         &.section-outstandingDoctor {
+                background: #f5f2f2;
+         }
+
+         &.section-handBook {
+                background: #f5f2f2;
+         }
+
+         // rieng bac si
+         .outstandingDoctor-container {
+                margin: 0 100px;
+                display: flex;
+                flex-direction: column;
+
+                .outstandingDoctor-header {
+                       height: 60px;
+                       margin-bottom: 30px;
+                       padding-top: 30px;
+
+                       .title-section {
+                              font-size: 22px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                       }
+
+                       .btn-section {
+                              float: right;
+                              display: block;
+                              border: none;
+                              padding: 10px 15px;
+                              background: #d1cece;
+                              color: black;
+
+
+                              &:hover {
+                                     background: #f7d800;
+                                     color: #eee;
+                              }
+                       }
+                }
+
+
+                .outstandingDoctor-body {
+                       text-align: center;
+
+                       .outstandingDoctor-customize {
+                              .bg-image {
+                                     background: url('../../assets/doctor/bs-noi-bat1.jpg');
+                                     width: 140px;
+                                     height: 140px;
+                                     background-position: center center;
+                                     background-repeat: no-repeat;
+                                     background-size: cover;
+                                     background-color: #eee;
+                                     border-radius: 50%;
+                                     border: 1px solid red;
+                                     margin-left: 65px;
+
+                              }
+                       }
+                }
+         }
+
+         // het rieng bac si
+         .handBook-container {
+                margin: 0 100px;
+                display: flex;
+                flex-direction: column;
+
+                .handBook-header {
+                       height: 60px;
+                       margin-bottom: 30px;
+                       padding-top: 30px;
+
+                       .title-section {
+                              font-size: 22px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                       }
+
+                       .btn-section {
+                              float: right;
+                              display: block;
+                              border: none;
+                              padding: 10px 15px;
+                              background: #d1cece;
+                              color: black;
+
+
+                              &:hover {
+                                     background: #f7d800;
+                                     color: #eee;
+                              }
+                       }
+                }
+
+                .handBook-body {
+                       .handBook-customize {
+                              .bg-image {
+                                     background: url('../../assets/handBook/kham-tai-mui-hong-1.png');
+                                     width: 278px;
+                                     height: 150px;
+                                     background-position: center center;
+                                     background-repeat: no-repeat;
+                                     background-size: cover;
+                                     background-color: #eee;
+                                     float: left;
+                                     position: relative;
+                                     min-height: 1px;
+                                     width: 50%
+                              }
+
+                              .title-bg {
+                                     padding-left: 10px;
+                                     width: 50%;
+                                     float: right;
+                                     max-height: 150px;
+                                     overflow: hidden;
+                                     padding-top: 3px;
+
+                                     h6 {
+                                            font-weight: bold;
+                                            font-size: 16px;
+                                            margin-bottom: 15px;
+                                     }
+                              }
+
+                              &:hover {
+                                     h6 {
+                                            color: #45c3d2;
+                                     }
+                              }
+                       }
+
+                       .slick-prev {
+
+                              //position: relative !important;
+                              left: -10px !important;
+                              z-index: 1000 !important;
+                              height: 48px !important;
+                              width: 44px !important;
+                              background: #e7d8d8ec;
+                              border: 2px solid gray;
+
+                              &:hover {
+                                     background: white !important;
+                              }
+
+                       }
+
+                       .slick-prev:before {
+                              font-family: FontAwesome !important;
+                              color: gray;
+                       }
+
+                       .slick-next {
+                              right: -10px !important;
+                              z-index: 1000 !important;
+                              height: 48px !important;
+                              width: 44px !important;
+                              background: #e7d8d8ec;
+                              border: 2px solid gray;
+
+
+                              &:hover {
+                                     background: white !important;
+                              }
+                       }
+
+                       .slick-next:before {
+                              font-family: FontAwesome !important;
+                              color: gray !important;
+                       }
+                }
+         }
+
+         .section-body {
+                .section-customize {
+                       .bg-image {
+
+                              width: 278px;
+                              height: 150px;
+                              background-position: center center;
+                              background-repeat: no-repeat;
+                              background-size: cover;
+                              background-color: #eee;
+
+                              &.section-specialty {
+                                     background: url('../../assets/specialty/co-xuong-khop.jpg');
+                              }
+
+                              &.section-healthFacilities {
+                                     background: url('../../assets/healthFacilities/lo-go-viet-duc.jpg');
+                              }
+                       }
+                }
+
+         }
+  }
+
+  .section-share {
+         height: 350px;
+
+         border-bottom: 3px solid #dad9dd;
+         border-top: 3px solid #dad9dd;
+
+         .section-container {
+                margin: 0 100px;
+                display: flex;
+                flex-direction: column;
+
+                .section-header {
+                       height: 60px;
+                       margin-bottom: 30px;
+                       padding-top: 30px;
+
+                       .title-section {
+                              font-size: 22px;
+                              font-weight: 600;
+                              text-transform: uppercase;
+                       }
+
+                       .btn-section {
+                              float: right;
+                              display: block;
+                              border: none;
+                              padding: 10px 15px;
+                              background: #d1cece;
+                              color: black;
+
+
+                              &:hover {
+                                     background: #f7d800;
+                                     color: #eee;
+                              }
+                       }
+                }
+
+
+         }
+  }
