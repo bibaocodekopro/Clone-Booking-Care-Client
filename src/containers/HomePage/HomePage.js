@@ -5,17 +5,32 @@ import Specialty from "./Section/Specialty";
 import Facilities from "./Section/healthFacilities";
 import Doctor from "./Section/outstandingDoctor";
 import HandBook from "./Section/handBook";
+import './HomePage.scss';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 class HomePage extends Component {
 
        render() {
-
+              let settings = {
+                     dots: false,
+                     infinite: true,
+                     speed: 500,
+                     slidesToShow: 4,
+                     slidesToScroll: 1
+              };
 
               return (
                      <div>
                             <HomeHeader />
-                            <Specialty />
-                            <Facilities />
-                            <Doctor />
+                            <Specialty
+                                   settings={settings}
+                            />
+                            <Facilities
+                                   settings={settings}
+                            />
+                            <Doctor
+                                   settings={settings}
+                            />
                             <HandBook />
                             <div style={{ height: '300px' }}></div>
                      </div>
