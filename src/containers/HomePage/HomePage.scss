@@ -1,287 +1,409 @@
-  .slick-prev {
+.slick-prev {
 
-         //position: relative !important;
-         left: -10px !important;
-         z-index: 1000 !important;
-         height: 48px !important;
-         width: 44px !important;
-         background: #e7d8d8ec;
-         border: 2px solid gray;
+       //position: relative !important;
+       left: -15px !important;
+       z-index: 1000 !important;
+       height: 40px !important;
+       width: 40px !important;
+       border-radius: 50%;
+       background: white;
+       border: 2px solid gray;
 
-         &:hover {
-                background: white !important;
-         }
+       &:hover {
+              background: white !important;
+       }
 
-  }
+}
 
-  .slick-prev:before {
-         font-family: FontAwesome !important;
-         color: gray;
-  }
+.slick-prev:before {
+       font-family: FontAwesome !important;
+       color: gray;
+}
 
-  .slick-next {
-         right: -10px !important;
-         z-index: 1000 !important;
-         height: 48px !important;
-         width: 44px !important;
-         background: #e7d8d8ec;
-         border: 2px solid gray;
-
-
-         &:hover {
-                background: white !important;
-         }
-  }
-
-  .slick-next:before {
-         font-family: FontAwesome !important;
-         color: gray !important;
-  }
-
-  .section-share {
-         &.section-specialty {
-                background: #f5f2f2;
-         }
+.slick-next {
+       right: -10px !important;
+       z-index: 1000 !important;
+       height: 40px !important;
+       width: 40px !important;
+       border-radius: 50%;
+       background: white;
+       border: 2px solid gray;
 
 
-         &.section-outstandingDoctor {
-                background: #f5f2f2;
-         }
+       &:hover {
+              background: white !important;
+       }
+}
 
-         &.section-handBook {
-                background: #f5f2f2;
-         }
-
-         // rieng bac si
-         .outstandingDoctor-container {
-                margin: 0 100px;
-                display: flex;
-                flex-direction: column;
-
-                .outstandingDoctor-header {
-                       height: 60px;
-                       margin-bottom: 30px;
-                       padding-top: 30px;
-
-                       .title-section {
-                              font-size: 22px;
-                              font-weight: 600;
-                              text-transform: uppercase;
-                       }
-
-                       .btn-section {
-                              float: right;
-                              display: block;
-                              border: none;
-                              padding: 10px 15px;
-                              background: #d1cece;
-                              color: black;
+.slick-next:before {
+       font-family: FontAwesome !important;
+       color: gray !important;
+}
 
 
-                              &:hover {
-                                     background: #f7d800;
-                                     color: #eee;
-                              }
-                       }
-                }
+.section-share {
+       &.section-specialty {
+              background: #f5f2f2;
+       }
 
 
-                .outstandingDoctor-body {
-                       text-align: center;
+       &.section-outstandingDoctor {
+              background: #f5f2f2;
+       }
 
-                       .outstandingDoctor-customize {
-                              .bg-image {
-                                     background: url('../../assets/doctor/bs-noi-bat1.jpg');
-                                     width: 140px;
-                                     height: 140px;
-                                     background-position: center center;
-                                     background-repeat: no-repeat;
-                                     background-size: cover;
-                                     background-color: #eee;
-                                     border-radius: 50%;
-                                     border: 1px solid red;
-                                     margin-left: 65px;
+       &.section-handBook {
+              background: #f5f2f2;
+       }
 
-                              }
-                       }
-                }
-         }
+       &.section-about {
+              padding-top: 25px;
+              background: #f5f2f2;
+              border-bottom: 3px solid #e8e7eb;
 
-         // het rieng bac si
-         .handBook-container {
-                margin: 0 100px;
-                display: flex;
-                flex-direction: column;
+              height: 500px !important;
+       }
 
-                .handBook-header {
-                       height: 60px;
-                       margin-bottom: 30px;
-                       padding-top: 30px;
+       // rieng bac si
+       .outstandingDoctor-container {
 
-                       .title-section {
-                              font-size: 22px;
-                              font-weight: 600;
-                              text-transform: uppercase;
-                       }
+              margin: 0 100px;
+              display: flex;
+              flex-direction: column;
 
-                       .btn-section {
-                              float: right;
-                              display: block;
-                              border: none;
-                              padding: 10px 15px;
-                              background: #d1cece;
-                              color: black;
+              .outstandingDoctor-header {
+                     height: 60px;
+                     margin-bottom: 30px;
+                     padding-top: 30px;
+
+                     .title-section {
+                            font-size: 22px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            font-family: 'Times New Roman', Times, serif;
+                     }
+
+                     .btn-section {
+                            float: right;
+                            display: block;
+                            border: none;
+                            padding: 10px 15px;
+                            background: #edeeed;
+                            color: black;
 
 
-                              &:hover {
-                                     background: #f7d800;
-                                     color: #eee;
-                              }
-                       }
-                }
-
-                .handBook-body {
-                       .handBook-customize {
-                              .bg-image {
-                                     background: url('../../assets/handBook/kham-tai-mui-hong-1.png');
-                                     width: 278px;
-                                     height: 150px;
-                                     background-position: center center;
-                                     background-repeat: no-repeat;
-                                     background-size: cover;
-                                     background-color: #eee;
-                                     float: left;
-                                     position: relative;
-                                     min-height: 1px;
-                                     width: 50%
-                              }
-
-                              .title-bg {
-                                     padding-left: 10px;
-                                     width: 50%;
-                                     float: right;
-                                     max-height: 150px;
-                                     overflow: hidden;
-                                     padding-top: 3px;
-
-                                     h6 {
-                                            font-weight: bold;
-                                            font-size: 16px;
-                                            margin-bottom: 15px;
-                                     }
-                              }
-
-                              &:hover {
-                                     h6 {
-                                            color: #45c3d2;
-                                     }
-                              }
-                       }
-
-                       .slick-prev {
-
-                              //position: relative !important;
-                              left: -10px !important;
-                              z-index: 1000 !important;
-                              height: 48px !important;
-                              width: 44px !important;
-                              background: #e7d8d8ec;
-                              border: 2px solid gray;
-
-                              &:hover {
-                                     background: white !important;
-                              }
-
-                       }
-
-                       .slick-prev:before {
-                              font-family: FontAwesome !important;
-                              color: gray;
-                       }
-
-                       .slick-next {
-                              right: -10px !important;
-                              z-index: 1000 !important;
-                              height: 48px !important;
-                              width: 44px !important;
-                              background: #e7d8d8ec;
-                              border: 2px solid gray;
+                            &:hover {
+                                   background: #f7d800;
+                                   color: #eee;
+                            }
+                     }
+              }
 
 
-                              &:hover {
-                                     background: white !important;
-                              }
-                       }
 
-                       .slick-next:before {
-                              font-family: FontAwesome !important;
-                              color: gray !important;
-                       }
-                }
-         }
+              .outstandingDoctor-body {
 
-         .section-body {
-                .section-customize {
-                       .bg-image {
+                     padding: 7px;
 
-                              width: 278px;
-                              height: 150px;
-                              background-position: center center;
-                              background-repeat: no-repeat;
-                              background-size: cover;
-                              background-color: #eee;
+                     .outstandingDoctor-border {
+                            padding: 5px;
 
-                              &.section-specialty {
-                                     background: url('../../assets/specialty/co-xuong-khop.jpg');
-                              }
+                            .outstandingDoctor-customize {
+                                   text-align: center;
+                                   border: 1px solid #ebe6e6;
+                                   padding: 15px;
 
-                              &.section-healthFacilities {
-                                     background: url('../../assets/healthFacilities/lo-go-viet-duc.jpg');
-                              }
-                       }
-                }
+                                   .outer-bg {
+                                          display: flex;
+                                          justify-content: center;
 
-         }
-  }
+                                          .bg-image {
 
-  .section-share {
-         height: 350px;
+                                                 background: url('../../assets/doctor/bs-noi-bat1.jpg');
+                                                 width: 140px;
+                                                 height: 140px;
+                                                 background-position: center center;
+                                                 background-repeat: no-repeat;
+                                                 background-size: cover;
+                                                 background-color: #eee;
+                                                 border-radius: 50%;
+                                                 border: 1px solid red;
 
-         border-bottom: 3px solid #dad9dd;
-         border-top: 3px solid #dad9dd;
+                                          }
+                                   }
 
-         .section-container {
-                margin: 0 100px;
-                display: flex;
-                flex-direction: column;
+                                   .position {
+                                          .nameDoctor {
+                                                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                 font-size: 14px;
+                                          }
 
-                .section-header {
-                       height: 60px;
-                       margin-bottom: 30px;
-                       padding-top: 30px;
+                                          .specialize {
 
-                       .title-section {
-                              font-size: 22px;
-                              font-weight: 600;
-                              text-transform: uppercase;
-                       }
+                                                 color: gray;
+                                                 font-family: 'Times New Roman', Times, serif;
+                                          }
+                                   }
 
-                       .btn-section {
-                              float: right;
-                              display: block;
-                              border: none;
-                              padding: 10px 15px;
-                              background: #d1cece;
-                              color: black;
+                                   &:hover {
+                                          color: aqua;
+                                   }
+
+                                   h6 {
+                                          font-size: 16px;
+                                          text-align: center;
+                                   }
+                            }
+                     }
+              }
+       }
+
+       // het rieng bac si
+       .handBook-container {
+              margin: 0 100px;
+              display: flex;
+              flex-direction: column;
+
+              .handBook-header {
+                     height: 60px;
+                     margin-bottom: 30px;
+                     padding-top: 30px;
+
+                     .title-section {
+                            font-size: 22px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            font-family: 'Times New Roman', Times, serif;
+                     }
+
+                     .btn-section {
+                            float: right;
+                            display: block;
+                            border: none;
+                            padding: 10px 15px;
+                            background: #edeeed;
+                            color: black;
 
 
-                              &:hover {
-                                     background: #f7d800;
-                                     color: #eee;
-                              }
-                       }
-                }
+                            &:hover {
+                                   background: #f7d800;
+                                   color: #eee;
+                            }
+                     }
+              }
+
+              .handBook-body {
+                     .handBook-customize {
+
+                            .bg-image {
+                                   background: url('../../assets/handBook/kham-tai-mui-hong-1.png');
+                                   width: 278px;
+                                   height: 150px;
+                                   background-position: center center;
+                                   background-repeat: no-repeat;
+                                   background-size: cover;
+                                   background-color: #eee;
+                                   float: left;
+                                   position: relative;
+                                   min-height: 1px;
+                                   width: 50%
+                            }
+
+                            .title-bg {
+                                   padding-left: 10px;
+                                   width: 50%;
+                                   float: right;
+                                   max-height: 150px;
+                                   overflow: hidden;
+                                   padding-top: 3px;
+                                   font-family: "Times New Roman", Times, serif;
+
+                                   h6 {
+                                          font-weight: bold;
+                                          font-size: 16px;
+                                          margin-bottom: 15px;
+                                   }
+                            }
+
+                            &:hover {
+                                   h6 {
+                                          color: #45c3d2;
+                                   }
+                            }
 
 
-         }
-  }
+                     }
+
+                     .slick-prev {
+
+                            //position: relative !important;
+                            left: -15px !important;
+                            z-index: 1000 !important;
+                            height: 40px !important;
+                            width: 40px !important;
+
+                            background: white;
+                            border: 2px solid gray;
+
+                            &:hover {
+                                   background: white !important;
+                            }
+
+                     }
+
+                     .slick-prev:before {
+                            font-family: FontAwesome !important;
+                            color: gray;
+                     }
+
+                     .slick-next {
+                            right: -10px !important;
+                            z-index: 1000 !important;
+                            height: 40px !important;
+                            width: 40px !important;
+                            background: white;
+                            border: 2px solid gray;
+
+
+                            &:hover {
+                                   background: white !important;
+                            }
+                     }
+
+                     .slick-next:before {
+                            font-family: FontAwesome !important;
+                            color: gray !important;
+                     }
+              }
+       }
+
+       .section-body {
+
+              .section-customize {
+
+                     font-family: "Times New Roman", Times, serif;
+
+                     h6 {
+                            font-size: 16px;
+                     }
+
+                     .bg-image {
+
+                            width: 278px;
+                            height: 150px;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-color: #eee;
+
+
+                            &.section-specialty {
+                                   background: url('../../assets/specialty/co-xuong-khop.jpg');
+
+
+                            }
+
+
+
+                            &.section-healthFacilities {
+                                   background: url('../../assets/healthFacilities/lo-go-viet-duc.jpg');
+                            }
+                     }
+
+                     &:hover {
+                            color: aqua;
+                     }
+              }
+
+       }
+}
+
+.section-share {
+       height: 350px;
+
+       border-bottom: 3px solid #e8e7eb;
+
+
+       .section-container {
+              margin: 0 100px;
+              display: flex;
+              flex-direction: column;
+
+              .section-header {
+                     height: 60px;
+                     margin-bottom: 30px;
+                     padding-top: 30px;
+
+                     .title-section {
+                            font-size: 22px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            font-family: 'Times New Roman', Times, serif;
+                     }
+
+                     .btn-section {
+                            float: right;
+                            display: block;
+                            border: none;
+                            padding: 10px 15px;
+                            background: #edeeed;
+                            color: black;
+
+
+                            &:hover {
+                                   background: #f7d800;
+                                   color: #eee;
+                            }
+                     }
+              }
+
+
+       }
+}
+
+.home-footer {
+       text-align: center;
+       padding-top: 15px;
+
+
+       a {
+              text-decoration: unset;
+
+       }
+}
+
+.section-about {
+       padding-top: 10px;
+       padding: 0 100px;
+
+       .section-about-header {
+              padding-bottom: 10px;
+              font-size: 22px;
+              font-weight: 600;
+              font-size: 22px;
+              font-weight: 600;
+              text-transform: uppercase;
+              font-family: 'Times New Roman', Times, serif;
+       }
+
+       .section-about-content {
+              display: flex;
+              gap: 15px;
+              width: 100%;
+
+              .content-left {
+                     width: 60%;
+              }
+
+              .content-right {
+                     width: 40%;
+
+                     p {
+                            text-align: justify;
+                            font-style: italic;
+                            font-family: Verdana, Geneva, Tahoma, sans-serif;
+                            font-size: 15px;
+
+                     }
+              }
+       }
+}
