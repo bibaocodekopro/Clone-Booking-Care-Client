@@ -14,47 +14,77 @@ class outstandingDoctor extends Component {
                                    </div>
                                    <div className="outstandingDoctor-body">
                                           <Slider {...this.props.settings} >
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
-                                                        </div>
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
 
-                                                 </div>
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
                                                         </div>
                                                  </div>
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
+
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
+
                                                         </div>
                                                  </div>
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
+
                                                         </div>
                                                  </div>
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
+
                                                         </div>
                                                  </div>
-                                                 <div className="outstandingDoctor-customize">
-                                                        <div className="bg-image" />
-                                                        <div className='position'>
-                                                               <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
-                                                               <div className="specialize">Khám tổng quát</div>
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
+
+                                                        </div>
+                                                 </div>
+                                                 <div className="outstandingDoctor-border">
+                                                        <div className="outstandingDoctor-customize">
+                                                               <div className="outer-bg">
+                                                                      <div className="bg-image" />
+                                                               </div>
+                                                               <div className='position'>
+                                                                      <div className="nameDoctor">Phó giáo sư tiến sĩ Bi Bảo</div>
+                                                                      <div className="specialize">Khám tổng quát</div>
+                                                               </div>
+
                                                         </div>
                                                  </div>
                                           </Slider>
